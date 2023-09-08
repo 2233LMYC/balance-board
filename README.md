@@ -5,6 +5,8 @@
 
 项目主要采用ESP-NOW传输协议，实现从机、主机、遥控间的无线数据传输，通过USB与PC端通信
 
+演示视频：https://www.bilibili.com/video/BV1DT411h7iQ/?spm_id_from=333.999.0.0&vd_source=7a38a5d2f2ca054aadbd8d9ad95c70ba
+
 #### 主要器件
 STM32F103C8T6 mpu6050 esp-01s 语音模块 功放 喇叭 
 
