@@ -1,0 +1,7 @@
+TCP Client配置步骤（模块需刷AT指令固件）
+	1.AT+RESTORE       //复位模块
+	2.AT+CWMODE_DEF=1  //STA模式
+	3.AT+RST           //重启
+	4.AT+CWJAP_DEF="ssid","password"              //连接WIFI（需要有对应Server端的WIFI）
+	5.AT+SAVETRANSLINK=1,"ip address",port,"TCP"  //上电透传模式，TCP配置（上电不断寻找自动连接）
+	6.重新上电

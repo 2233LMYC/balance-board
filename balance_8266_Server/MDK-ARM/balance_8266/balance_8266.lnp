@@ -1,0 +1,27 @@
+--cpu Cortex-M3
+"balance_8266\startup_stm32f103xb.o"
+"balance_8266\at.o"
+"balance_8266\main.o"
+"balance_8266\gpio.o"
+"balance_8266\usart.o"
+"balance_8266\stm32f1xx_it.o"
+"balance_8266\stm32f1xx_hal_msp.o"
+"balance_8266\stm32f1xx_hal_gpio_ex.o"
+"balance_8266\stm32f1xx_hal_tim.o"
+"balance_8266\stm32f1xx_hal_tim_ex.o"
+"balance_8266\stm32f1xx_hal_uart.o"
+"balance_8266\stm32f1xx_hal.o"
+"balance_8266\stm32f1xx_hal_rcc.o"
+"balance_8266\stm32f1xx_hal_rcc_ex.o"
+"balance_8266\stm32f1xx_hal_gpio.o"
+"balance_8266\stm32f1xx_hal_dma.o"
+"balance_8266\stm32f1xx_hal_cortex.o"
+"balance_8266\stm32f1xx_hal_pwr.o"
+"balance_8266\stm32f1xx_hal_flash.o"
+"balance_8266\stm32f1xx_hal_flash_ex.o"
+"balance_8266\stm32f1xx_hal_exti.o"
+"balance_8266\system_stm32f1xx.o"
+--library_type=microlib --strict --scatter "balance_8266\balance_8266.sct"
+--summary_stderr --info summarysizes --map --load_addr_map_info --xref --callgraph --symbols
+--info sizes --info totals --info unused --info veneers
+--list "balance_8266.map" -o balance_8266\balance_8266.axf
