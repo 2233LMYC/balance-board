@@ -7,6 +7,12 @@
 
 演示视频：https://www.bilibili.com/video/BV1DT411h7iQ/?spm_id_from=333.999.0.0&vd_source=7a38a5d2f2ca054aadbd8d9ad95c70ba
 
+#### 主要软件
+MDK5 VSCode cubeMX 
+
+#### 主要语言
+C python
+
 #### 主要器件
 STM32F103C8T6 mpu6050 esp-01s 语音模块 功放 喇叭 
 
