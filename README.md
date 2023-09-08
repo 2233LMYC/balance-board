@@ -1,39 +1,26 @@
 # balance-board
 
 #### 介绍
-{**以下是 Gitee 平台说明，您可以替换此简介**
-Gitee 是 OSCHINA 推出的基于 Git 的代码托管平台（同时支持 SVN）。专为开发者提供稳定、高效、安全的云端软件开发协作平台
-无论是个人、团队、或是企业，都能够用 Gitee 实现代码托管、项目管理、协作开发。企业项目请看 [https://gitee.com/enterprises](https://gitee.com/enterprises)}
+平衡板项目是基于Bobath疗法的康复训练系统的一个子项目，目的在于将原有康复训练平衡板加装电子传感器，将动作信息转化为声光电并控制游戏角色移动，以吸引患儿主动参与到康复训练中。
 
-#### 软件架构
-软件架构说明
+项目主要采用ESP-NOW传输协议，实现从机、主机、遥控间的无线数据传输，通过USB与PC端通信
 
-
-#### 安装教程
-
-1.  xxxx
-2.  xxxx
-3.  xxxx
-
-#### 使用说明
-
-1.  xxxx
-2.  xxxx
-3.  xxxx
-
-#### 参与贡献
-
-1.  Fork 本仓库
-2.  新建 Feat_xxx 分支
-3.  提交代码
-4.  新建 Pull Request
+#### 主要器件
+STM32F103C8T6 mpu6050 esp-01s 语音模块 功放 喇叭 
 
 
-#### 特技
+#### 实现方法
+从机端：
+1.  单片机定时获取陀螺仪姿态信息并处理，角度信息通过esp01s运用ESP-NOW协议实时传输到主机
+2.  若角度变化超过预定范围则触发语音提醒（语音模式有提示音，游戏模式无提示音）
+3.  电量显示
 
-1.  使用 Readme\_XXX.md 来支持不同的语言，例如 Readme\_en.md, Readme\_zh.md
-2.  Gitee 官方博客 [blog.gitee.com](https://blog.gitee.com)
-3.  你可以 [https://gitee.com/explore](https://gitee.com/explore) 这个地址来了解 Gitee 上的优秀开源项目
-4.  [GVP](https://gitee.com/gvp) 全称是 Gitee 最有价值开源项目，是综合评定出的优秀开源项目
-5.  Gitee 官方提供的使用手册 [https://gitee.com/help](https://gitee.com/help)
-6.  Gitee 封面人物是一档用来展示 Gitee 会员风采的栏目 [https://gitee.com/gitee-stars/](https://gitee.com/gitee-stars/)
+主机端：
+1.  通过esp01s实时获取角度信息，通过USB向PC机发送控制信息，从而控制游戏角色移动
+2.  实时接收遥控信息，向从机发送切换工作模式信息（语音模式  or  游戏模式）
+
+PC端：
+1.  接收USB数据，控制游戏角色移动
+
+![输入图片说明](217324f566af57a2bcb21443f6f40ee.jpg)
+
